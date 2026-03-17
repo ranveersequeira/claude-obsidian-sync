@@ -30,7 +30,6 @@ from datetime import datetime, timezone
 from collections import Counter
 from typing import Optional
 
-
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 VAULT_PATH = Path(os.environ.get(
     "OBSIDIAN_VAULT_PATH",
@@ -766,7 +765,6 @@ def process_single_transcript(
     dry_run: bool = False,
     ai_summary: str = "",
 ) -> Optional[dict]:
-
     """
     Process one transcript file → write to vault.
     Returns info dict or None if skipped.
