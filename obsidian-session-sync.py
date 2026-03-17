@@ -28,6 +28,8 @@ import re
 from pathlib import Path
 from datetime import datetime, timezone
 from collections import Counter
+from typing import Optional
+
 
 # ─── CONFIG ───────────────────────────────────────────────────────────────────
 VAULT_PATH = Path(os.environ.get(
@@ -763,7 +765,8 @@ def process_single_transcript(
     session_id: str = "unknown",
     dry_run: bool = False,
     ai_summary: str = "",
-) -> dict | None:
+) -> Optional[dict]:
+
     """
     Process one transcript file → write to vault.
     Returns info dict or None if skipped.
