@@ -110,16 +110,16 @@ The script handles real-world session noise:
 ```
 ~/vault/dev/Claude Sessions/
 ├── Projects/
-│   ├── native-food-ordering/
+│   ├── projectname/
 │   │   └── 2026-03-17.md     ← all sessions today (appends with timestamps)
-│   └── ixigo-routing/
+│   └── dev-routing/
 │       └── 2026-03-15.md
 ├── Daily/
 │   └── 2026-03-17.md          ← links to every project worked on today
 └── _index.md                   ← master Map of Content
 ```
 
-**Project detection:** last folder name from `cwd`. `/Users/ranveer.kumar/Projects/Confirmtkt-Website/native-food-ordering` → `native-food-ordering`
+**Project detection:** last folder name from `cwd`. `/Users/ranveer.kumar/folder/projectname` → `projectname`
 
 **Linking:** wikilinks throughout, tags `#claude-session`, `#project/<name>`. Graph view works.
 
@@ -158,7 +158,7 @@ python3 ~/.claude/hooks/obsidian-session-sync.py --convert <file.jsonl> --json
 The markdown output looks like:
 
 ```markdown
-# Session: native-food-ordering
+# Session: food
 
 ID: `2c10d3be` · Branch: `feat/recent-searches` · Duration: 3h 43m · Messages: 12
 
